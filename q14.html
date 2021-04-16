@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>4.14</title>
+    </head>
+    <body>
+        <img id="image"  src="https://static.wikia.nocookie.net/antagonists/images/3/33/4805401-4716538-the_avengers_ironman_by_stephencanlas-d4zpaxl.jpg/revision/latest?cb=20160324202944" height="100px" width="auto">
+        <button onclick="mouseOver()">click</button>
+        <script>
+            var click=0;
+            function mouseOver() {
+                click+=1
+                if(click==1){
+                    document.getElementById("image").src = "https://i.pinimg.com/originals/01/e8/aa/01e8aa52b1fed0eaa3840d105c328fed.jpg";
+                }
+                else if(click==2){
+                    document.getElementById("image").src = "https://images-na.ssl-images-amazon.com/images/I/61cl%2BE7jjQL._AC_SY879_.jpg";
+                }
+                else if(click==3){
+                    document.getElementById("image").src = "https://upload.wikimedia.org/wikipedia/en/3/37/Captain_America_The_First_Avenger_poster.jpg";
+                }
+                else if(click==4){
+                    document.getElementById("image").src = "https://wallpapercave.com/wp/wp3003500.jpg";
+                }
+            }
+        </script>
+    </body>
+</html>

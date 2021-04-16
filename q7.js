@@ -1,0 +1,15 @@
+var person = prompt("Please enter your name");
+var city = prompt("enter a city");
+var house = prompt("enter a place where a person lives")
+var number = prompt("enter a number")
+var color = prompt("enter a color")
+document.getElementById('name').innerHTML=person
+document.getElementById('name').style.color=color
+document.getElementById('city').innerHTML=city
+document.getElementById('city').style.color=color
+document.getElementById('place').innerHTML=house
+document.getElementById('place').style.color=color
+document.getElementById('number').innerHTML=number
+document.getElementById('number').style.color=color
+document.getElementById('color').innerHTML=color
+document.getElementById('color').style.color=color

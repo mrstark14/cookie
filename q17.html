@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>4.17</title>
+    </head>
+    <body>
+        <img src="https://i.pinimg.com/originals/01/e8/aa/01e8aa52b1fed0eaa3840d105c328fed.jpg" onclick="openWin()" height="400px" width="auto">
+        <button onclick="closeWin()">Close</button>
+
+        <script>
+        var myWindow;
+
+        function openWin() {
+            myWindow = window.open("https://www.google.com/");
+        }
+        function closeWin() {
+            myWindow.close();
+        }
+        </script>
+    </body>
+</html>

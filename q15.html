@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>4.14</title>
+    </head>
+    <body>
+        <img id="image"  src="https://static.wikia.nocookie.net/antagonists/images/3/33/4805401-4716538-the_avengers_ironman_by_stephencanlas-d4zpaxl.jpg/revision/latest?cb=20160324202944" height="100px" width="auto">
+        <div id="btn1"><button onclick="mouseOver()">forward</button></div><div id="btn2"></div>
+        <script>
+            var click=0;
+            function mouseOver() {
+                click+=1
+                if(click==0){
+                    document.getElementById("image").src="https://static.wikia.nocookie.net/antagonists/images/3/33/4805401-4716538-the_avengers_ironman_by_stephencanlas-d4zpaxl.jpg/revision/latest?cb=20160324202944"
+                    document.getElementById("btn2").innerHTML=''
+                }
+                else if(click==1){
+                    document.getElementById("image").src = "https://i.pinimg.com/originals/01/e8/aa/01e8aa52b1fed0eaa3840d105c328fed.jpg";
+                    document.getElementById("btn2").innerHTML='<button onclick="mouseOut()" >Back</button>'
+                }
+                else if(click==2){
+                    document.getElementById("image").src = "https://images-na.ssl-images-amazon.com/images/I/61cl%2BE7jjQL._AC_SY879_.jpg";
+                    document.getElementById("btn1").innerHTML='<button onclick="mouseOver()" >forward</button>'
+                }
+                else if(click==3){
+                    document.getElementById("image").src = "https://upload.wikimedia.org/wikipedia/en/3/37/Captain_America_The_First_Avenger_poster.jpg";
+                    document.getElementById("btn1").innerHTML=''
+                }
+            }
+            function mouseOut() {
+                click=click-1
+                if(click==0){
+                    document.getElementById("image").src="https://static.wikia.nocookie.net/antagonists/images/3/33/4805401-4716538-the_avengers_ironman_by_stephencanlas-d4zpaxl.jpg/revision/latest?cb=20160324202944"
+                    document.getElementById("btn2").innerHTML=''
+                }
+                else if(click==1){
+                    document.getElementById("image").src = "https://i.pinimg.com/originals/01/e8/aa/01e8aa52b1fed0eaa3840d105c328fed.jpg";
+                    document.getElementById("btn2").innerHTML='<button onclick="mouseOut()" >Back</button>'
+                }
+                else if(click==2){
+                    document.getElementById("image").src = "https://images-na.ssl-images-amazon.com/images/I/61cl%2BE7jjQL._AC_SY879_.jpg";
+                    document.getElementById("btn1").innerHTML='<button onclick="mouseOver()" >forward</button>'
+                }
+                else if(click==3){
+                    document.getElementById("image").src = "https://upload.wikimedia.org/wikipedia/en/3/37/Captain_America_The_First_Avenger_poster.jpg";
+                    document.getElementById("btn1").innerHTML=''
+                }
+            }
+        </script>
+    </body>
+</html>

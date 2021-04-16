@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>4.18</title>
+    </head>
+    <body>
+        <button onclick="openWin()">Open</button>
+        <button onclick="closeWin()">Close</button>
+
+        <script>
+        var myWindow1;
+        var myWindow2;
+        var myWindow3;
+        var myWindow4;
+        var myWindow5;
+
+        function openWin() {
+            myWindow1 = window.open("https://www.google.com/","myWindow1","width=200,height=100");
+            myWindow2 = window.open("https://www.google.com/","myWindow2", "width=200,height=100,top=0, left="+screen.width+"-200");
+            myWindow3 = window.open("https://www.google.com/","myWindow3","width=200,height=100, top="+screen.height/2+"-100, left="+screen.width/2+"-200");
+            myWindow4 = window.open("https://www.google.com/","myWindow4","width=200,height=100, top="+screen.height+"-100, left=0");
+            myWindow5 = window.open("https://www.google.com/","myWindow5","width=200,height=100, top="+screen.height+"-100, left="+screen.width+"-200");
+        }
+        function closeWin() {
+            myWindow1.close();
+            myWindow2.close();
+            myWindow3.close();
+            myWindow4.close();
+            myWindow5.close();
+        }
+        </script>
+    </body>
+</html>

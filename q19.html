@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            4.19
+        </title>
+    </head>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+        <script>
+            if(document.cookie.length==0){
+                Cookies.set('name', '0', { expires: 7 })
+                document.write("you visited this for the first time")
+            }
+            else{
+                document.write("You visited this place for the "+document.cookie.get('name')+" time.")
+                Cookies.set('name',toString(parseInt(Cookies.get('name'))+1), {expires: 7} )
+            }
+        </script>
+    </body>
+</html>
