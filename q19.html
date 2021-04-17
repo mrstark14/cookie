@@ -9,15 +9,30 @@
         <script>
             function myFunction(){
                 if(document.cookie.length==0){
+                    var d= new Date();
                     document.write("You visited this page for the first time.");
-                    document.cookie="username=1; expires=Mon, 04-Sep-2028 09:00:00 UTC";
+                    document.cookie="username=1"+d+"; expires=Mon, 04-Sep-2028 09:00:00 UTC";
                 }
                 else{
                     var count=document.cookie.split("=");
-                    var x=parseInt(count[1])+1;
-                    document.cookie="username="+count+";expires=Mon, 16-Sep-2019 09:00:00 UTC";
-                    document.cookie="username="+x+";expires=Mon, 04-Sep-2028 09:00:00 UTC";
-                    document.write("You visited the website for the "+x+"time");
+                    var d= new Date();
+                    var a=0;
+                    var text1="";
+                    var text="";
+                    document.cookie="username="+count[1]+";expires=Mon, 16-Sep-2019 09:00:00 UTC";
+                    for(var y in count[1]){
+                        if(!isNaN(parseInt(count[1][y])) && a==0){
+                            text1+=count[1][y];
+                        }
+                        else{
+                            a+=1
+                            text+=count[1][y];
+                        }
+                    }
+                    var x=parseInt(text1)+1;
+                    document.write("You visited the website for the "+text1+" time<br>");
+                    document.write("You last visited on "+text);
+                    document.cookie="username="+x+d+";expires=Mon, 04-Sep-2028 09:00:00 UTC";
                 }
             }
         </script>
