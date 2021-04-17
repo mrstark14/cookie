@@ -5,16 +5,20 @@
             4.19
         </title>
     </head>
-    <body>
-        <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <body onload="myFunction()">        
         <script>
-            if(document.cookie.length==0){
-                Cookies.set('name', '0', { expires: 7 })
-                document.write("you visited this for the first time")
-            }
-            else{
-                document.write("You visited this place for the "+document.cookie.get('name')+" time.")
-                Cookies.set('name',toString(parseInt(Cookies.get('name'))+1), {expires: 7} )
+            function myFunction(){
+                if(document.cookie.length==0){
+                    document.write("You visited this page for the first time.");
+                    document.cookie="username=1; expires=Mon, 04-Sep-2028 09:00:00 UTC";
+                }
+                else{
+                    var count=document.cookie.split("=");
+                    var x=parseInt(count[1])+1;
+                    document.cookie="username="+count+";expires=Mon, 16-Sep-2019 09:00:00 UTC";
+                    document.cookie="username="+x+";expires=Mon, 04-Sep-2028 09:00:00 UTC";
+                    document.write("You visited the website for the "+x+"time");
+                }
             }
         </script>
     </body>
